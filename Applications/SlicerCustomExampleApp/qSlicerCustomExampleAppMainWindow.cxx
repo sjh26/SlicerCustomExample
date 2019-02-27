@@ -71,7 +71,7 @@ void qSlicerCustomExampleAppMainWindowPrivate::setupUi(QMainWindow * mainWindow)
   //----------------------------------------------------------------------------
   mainWindow->setWindowIcon(QIcon(":/Icons/Medium/DesktopIcon.png"));
 
-  QPixmap logo(":/LogoFull.png");
+  QPixmap logo(":/Logo.png");
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
   qreal dpr = sqrt(qApp->desktop()->logicalDpiX()*qreal(qApp->desktop()->logicalDpiY()) / (qApp->desktop()->physicalDpiX()*qApp->desktop()->physicalDpiY()));
   logo.setDevicePixelRatio(dpr);
