@@ -3,7 +3,7 @@ SlicerCustomExample by Kitware, Inc.
 
 Customized version of Slicer
 
-![SlicerCustomExample by Kitware, Inc.](Applications/App/Resources/Images/LogoFull.png?raw=true)
+![SlicerCustomExample by Kitware, Inc.](Applications/SlicerCustomExampleApp/Resources/Images/LogoFull.png?raw=true)
 
 Prerequisites
 -------------
