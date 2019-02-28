@@ -111,22 +111,22 @@ set(Slicer_QTSCRIPTEDMODULES_DISABLED
 set(Slicer_EXTENSION_SOURCE_DIRS
   #${SlicerCustomExample_SOURCE_DIR}/Modules/CLI/MyCLIModule
   #${SlicerCustomExample_SOURCE_DIR}/Modules/Loadable/MyLoadableModule
-  #${SlicerCustomExample_SOURCE_DIR}/Modules/Scripted/MyScriptedModule
+  ${SlicerCustomExample_SOURCE_DIR}/Modules/Scripted/Example
   )
 
 # Add remote extension source directories
 
 # SlicerOpenIGTLink
-#set(extension_name "SlicerOpenIGTLink")
-#set(${extension_name}_SOURCE_DIR "${CMAKE_BINARY_DIR}/${extension_name}")
-#FetchContent_Populate(${extension_name}
-#  SOURCE_DIR     ${${extension_name}_SOURCE_DIR}
-#  GIT_REPOSITORY ${EP_GIT_PROTOCOL}://github.com/openigtlink/SlicerOpenIGTLink.git
-#  GIT_TAG        2b92f7b1ffe02403109b671f28424e8770e902a0
-#  GIT_PROGRESS   1
-#  QUIET
-#  )
-#list(APPEND Slicer_EXTENSION_SOURCE_DIRS ${${extension_name}_SOURCE_DIR})
+set(extension_name "SlicerOpenIGTLink")
+set(${extension_name}_SOURCE_DIR "${CMAKE_BINARY_DIR}/${extension_name}")
+FetchContent_Populate(${extension_name}
+ SOURCE_DIR     ${${extension_name}_SOURCE_DIR}
+ GIT_REPOSITORY ${EP_GIT_PROTOCOL}://github.com/openigtlink/SlicerOpenIGTLink.git
+ GIT_TAG        2b92f7b1ffe02403109b671f28424e8770e902a0
+ GIT_PROGRESS   1
+ QUIET
+ )
+list(APPEND Slicer_EXTENSION_SOURCE_DIRS ${${extension_name}_SOURCE_DIR})
 
 
 # Add Slicer sources
