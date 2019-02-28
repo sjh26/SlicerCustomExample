@@ -17,7 +17,7 @@ if(NOT DEFINED slicersources_SOURCE_DIR)
   # Download Slicer sources and set variables slicersources_SOURCE_DIR and slicersources_BINARY_DIR
   FetchContent_Populate(slicersources
     GIT_REPOSITORY git://github.com/Slicer/Slicer
-    GIT_TAG        bfdf117030055f910fcd1a2877951cebebf7b9ae
+    GIT_TAG        c99aa7619afa679c6fcd6f599785f73d5b3484ae
     GIT_PROGRESS   1
     )
 else()
@@ -111,22 +111,22 @@ set(Slicer_QTSCRIPTEDMODULES_DISABLED
 set(Slicer_EXTENSION_SOURCE_DIRS
   #${SlicerCustomExample_SOURCE_DIR}/Modules/CLI/MyCLIModule
   #${SlicerCustomExample_SOURCE_DIR}/Modules/Loadable/MyLoadableModule
-  #${SlicerCustomExample_SOURCE_DIR}/Modules/Scripted/MyScriptedModule
+  ${SlicerCustomExample_SOURCE_DIR}/Modules/Scripted/Example
   )
 
 # Add remote extension source directories
 
 # SlicerOpenIGTLink
-#set(extension_name "SlicerOpenIGTLink")
-#set(${extension_name}_SOURCE_DIR "${CMAKE_BINARY_DIR}/${extension_name}")
-#FetchContent_Populate(${extension_name}
-#  SOURCE_DIR     ${${extension_name}_SOURCE_DIR}
-#  GIT_REPOSITORY ${EP_GIT_PROTOCOL}://github.com/openigtlink/SlicerOpenIGTLink.git
-#  GIT_TAG        2b92f7b1ffe02403109b671f28424e8770e902a0
-#  GIT_PROGRESS   1
-#  QUIET
-#  )
-#list(APPEND Slicer_EXTENSION_SOURCE_DIRS ${${extension_name}_SOURCE_DIR})
+set(extension_name "SlicerOpenIGTLink")
+set(${extension_name}_SOURCE_DIR "${CMAKE_BINARY_DIR}/${extension_name}")
+FetchContent_Populate(${extension_name}
+ SOURCE_DIR     ${${extension_name}_SOURCE_DIR}
+ GIT_REPOSITORY ${EP_GIT_PROTOCOL}://github.com/openigtlink/SlicerOpenIGTLink.git
+ GIT_TAG        2b92f7b1ffe02403109b671f28424e8770e902a0
+ GIT_PROGRESS   1
+ QUIET
+ )
+list(APPEND Slicer_EXTENSION_SOURCE_DIRS ${${extension_name}_SOURCE_DIR})
 
 
 # Add Slicer sources

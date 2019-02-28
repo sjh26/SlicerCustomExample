@@ -52,8 +52,8 @@ QPalette qAppStyle::standardPalette()const
 {
   QPalette palette = this->Superclass::standardPalette();
 
-  palette.setColor(QPalette::Active, QPalette::Window, "#eaebee");
-  palette.setColor(QPalette::Inactive, QPalette::Window, "#eaebee");
+  palette.setColor(QPalette::Active, QPalette::Window, "#f3f7f2");
+  palette.setColor(QPalette::Inactive, QPalette::Window, "#f3f7f2");
   palette.setColor(QPalette::Disabled, QPalette::Window, "#dedfe1");
   palette.setColor(QPalette::Active, QPalette::WindowText, "#002f4f");
   palette.setColor(QPalette::Inactive, QPalette::WindowText, "#002f4f");
@@ -63,13 +63,13 @@ QPalette qAppStyle::standardPalette()const
   palette.setColor(QPalette::Disabled, QPalette::Text, "#2a404f");
   palette.setColor(QPalette::Active, QPalette::Base, "#ffffff");
   palette.setColor(QPalette::Inactive, QPalette::Base, "#ffffff");
-  palette.setColor(QPalette::Disabled, QPalette::Base, "#eaebee");
+  palette.setColor(QPalette::Disabled, QPalette::Base, "#f3f7f2");
 
 
   palette.setColor(QPalette::Light, "#ffffff");
   palette.setColor(QPalette::Button, "#dedfe1");
-  palette.setColor(QPalette::Mid, "#005f9e");
-  palette.setColor(QPalette::Dark, "#005f9e");
+  palette.setColor(QPalette::Mid, "#009e00");
+  palette.setColor(QPalette::Dark, "#009e00");
   palette.setColor(QPalette::Active, QPalette::ButtonText, "#005f9e");
   palette.setColor(QPalette::Inactive, QPalette::ButtonText, "#005f9e");
   palette.setColor(QPalette::Disabled, QPalette::ButtonText, "#003050");
